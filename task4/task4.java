@@ -13,15 +13,15 @@ public class task4 {
 
         try {
 
-            Scanner scanner= new Scanner(new File(filename));
-            List<Integer> numbers = new ArrayList<>();
-            while(scanner.hasNextDouble()) {
+            Scanner scanner= new Scanner(new File(filename)); //создание scanner для чтения файла
+            List<Integer> numbers = new ArrayList<>();        //создание входного массива
+            while(scanner.hasNextDouble()) {                  //чтение входного массива из файла
                 numbers.add(scanner.nextInt());
             }
             Collections.sort(numbers);
-            int median = numbers.get(numbers.size() / 2);
+            int median = numbers.get(numbers.size() / 2);     //получение медианы массива
             int totalMoves = 0;
-            for (int num : numbers) {
+            for (int num : numbers) {                        //подсчёт суммы расстояний до медианы
                 totalMoves += Math.abs(num - median);
             }
            if (totalMoves <= 20) {

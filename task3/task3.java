@@ -9,9 +9,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 class Test{
     public int id;
     public String title;
-    @JsonIgnoreProperties(ignoreUnknown = true)
+    //@JsonIgnoreProperties(ignoreUnknown = true)
     public String value;
-    @JsonIgnoreProperties(ignoreUnknown = true)
+    //@JsonIgnoreProperties(ignoreUnknown = true)
     public ArrayList<Test> values = new ArrayList<>();
 }
 
@@ -22,7 +22,7 @@ class Tests{
         this.tests = tests;
     }
     public Tests()
-    {
+    { //конструктор по умолчанию
     }
 }
 
